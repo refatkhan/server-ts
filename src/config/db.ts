@@ -9,7 +9,8 @@ const initDB = async () => {
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
         email VARCHAR(150) UNIQUE NOT NULL,
-        age  INT,
+        password TEXT NOT NULL,
+        age INT,
         phone VARCHAR(18),
         address TEXT,
         created_at TIMESTAMP DEFAULT NOW(),
@@ -30,4 +31,4 @@ const initDB = async () => {
     )
             `)
 }
- export default initDB;
+export default initDB;
